@@ -322,9 +322,13 @@ body {
     width: 100%;
 }
 
-
-.section__two{
+.section__two {
     padding: 50px;
-    background-color:white;
+    background-color: white;
 }
 
+.white-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+}
