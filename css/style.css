@@ -1,6 +1,8 @@
 :root{
 
-  --main: ;
+  --main: 00B637;
+  --mainDark: 00813A;
+  --mainLight: ;
   --accent: ;
   --black: #282828;
   --border-radius: 4px;
