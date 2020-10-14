@@ -332,3 +332,16 @@ body {
     padding: 25px;
     border-radius: 5px;
 }
+
+.unrounded-white-card {
+    background-color: white;
+    padding: 25px;
+}
+
+.form-input-decoration {
+    border: none;
+    height: 55px;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 3px
+}
