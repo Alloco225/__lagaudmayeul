@@ -19,6 +19,7 @@
 
 body {
     font-family: "Roboto";
+    font-family: 'Merriweather', serif;
     transition: all .3s ease-in;
     font-size: 17px;
     margin: 0px;
