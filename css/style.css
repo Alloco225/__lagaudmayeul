@@ -1,12 +1,303 @@
-:root{
+:root {
+    --main: ;
+    --accent: ;
+    --primary:#00B637;
+    --black: #282828;
+    --border-radius: 4px;
+    --mainFont: ;
+    --accentFont: ;
+    --titleFont: ;
+    --bodyFont: ;
+    --linkFont: ;
+}
 
-  --main: ;
-  --accent: ;
-  --black: #282828;
-  --border-radius: 4px;
-  --mainFont: ;
-  --accentFont: ;
-  --titleFont: ;
-  --bodyFont: ;
-  --linkFont: ;
+/*NAVBAR*/
+
+.nav-color{
+    color:black;
+}
+
+.nav-color:hover{
+    color:var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+}
+.navigation-bar {
+    background-color: #fff;
+    padding: 1.8rem 0 1.8rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+    z-index: 1000;
+}
+
+.navigation-bar .hamburger-menu {
+    display: none;
+    height: 4rem;
+    width: 4rem;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    right: 0rem;
+    padding: 1.4rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.navigation-bar .hamburger-menu img {
+    max-height: 2.8rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar .hamburger-menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .hamburger-menu {
+        right: 1rem;
+    }
+}
+
+.navigation-bar .user-connect-box {
+    align-items: center;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    padding: 1rem 2rem;
+}
+
+.navigation-bar .user-connect-box span {
+    color: var(--primary);
+    padding-left: .5rem;
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect-box span {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar .user-connect-box {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect-box {
+        border: none;
+        padding: 0px;
+    }
+}
+
+.navigation-bar .user-connect {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.navigation-bar .user-connect img {
+    height: 4rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect img {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+.navigation-bar__logo {
+    max-height: 2.5rem;
+    color:var(--primary)
+}
+
+.navigation-bar__block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__block {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__block .nav-action {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__menu {
+        margin-top: 2rem;
+        display: none;
+    }
+}
+
+.navigation-bar__item {
+    display: inline-block;
+}
+
+.navigation-bar__item:not(:last-child) {
+    margin-right: 2.6rem;
+}
+
+.navigation-bar__item.--minimal-mr {
+    margin-right: .5rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__item.--minimal-mr {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+}
+
+.navigation-bar__item.--desktop-display {
+    display: none;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__item {
+        display: block;
+        padding: 0;
+    }
+    .navigation-bar__item:not(:last-child) {
+        margin-right: 0;
+        border-bottom: 1px dashed #eee;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__link {
+        display: block;
+        padding: 1rem .5rem;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__link:hover {
+        background-color: rgba(238, 238, 238, 0.2);
+    }
+}
+
+.navigation-bar__logo {
+    max-height: 3rem;
+    color:var(--primary)
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__menu {
+        margin-top: 2rem;
+        display: none;
+    }
+}
+
+
+
+.navigation-bar .user-connect {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.navigation-bar .user-connect img {
+    height: 4rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect img {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 36em) {
+    .navigation-bar .user-connect {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+.navigation-bar__logo {
+    max-height: 2rem;
+    color:var(--primary)
+}
+
+.navigation-bar__block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__block {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__block .nav-action {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__menu {
+        margin-top: 2rem;
+        display: none;
+    }
+}
+
+.navigation-bar__item {
+    display: inline-block;
+}
+
+.navigation-bar__item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.navigation-bar__item.--minimal-mr {
+    margin-right: .5rem;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__item.--minimal-mr {
+        display: inline-block;
+        margin-top: 1rem;
+    }
+}
+
+.navigation-bar__item.--desktop-display {
+    display: none;
+}
+
+@media only screen and (max-width: 75em) {
+    .navigation-bar__item.--desktop-display {
+        display: inline-block;
+        margin-top: 1rem;
+    }
 }
