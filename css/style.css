@@ -1,7 +1,7 @@
 :root {
     --main: ;
     --accent: ;
-    --primary:#00B637;
+    --primary: #00B637;
     --black: #282828;
     --border-radius: 4px;
     --mainFont: ;
@@ -13,15 +13,28 @@
 
 /*NAVBAR*/
 
-.nav-color{
-    color:black;
+.primary-text-color {
+    color: var(--primary);
 }
 
-.nav-color:hover{
-    color:var(--primary);
+body {
+    font-family: "Roboto";
+    transition: all .3s ease-in;
+    font-size: 17px;
+    margin: 0px;
+    background: #EFEFEF;
+}
+
+.nav-color {
+    color: black;
+}
+
+.nav-color:hover {
+    color: var(--primary);
     font-weight: 500;
     text-decoration: underline;
 }
+
 .navigation-bar {
     background-color: #fff;
     padding: 1.8rem 0 1.8rem;
@@ -124,7 +137,7 @@
 
 .navigation-bar__logo {
     max-height: 2.5rem;
-    color:var(--primary)
+    color: var(--primary)
 }
 
 .navigation-bar__block {
@@ -202,7 +215,7 @@
 
 .navigation-bar__logo {
     max-height: 3rem;
-    color:var(--primary)
+    color: var(--primary)
 }
 
 @media only screen and (max-width: 75em) {
@@ -211,8 +224,6 @@
         display: none;
     }
 }
-
-
 
 .navigation-bar .user-connect {
     height: 4rem;
@@ -243,7 +254,7 @@
 
 .navigation-bar__logo {
     max-height: 2rem;
-    color:var(--primary)
+    color: var(--primary)
 }
 
 .navigation-bar__block {
@@ -301,3 +312,19 @@
         margin-top: 1rem;
     }
 }
+
+/* header */
+
+.header {
+    /* position: absolute; */
+    background: #DDDDDD;
+    height: 400px;
+    width: 100%;
+}
+
+
+.section__two{
+    padding: 30px;
+    background-color:white;
+}
+
