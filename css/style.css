@@ -18,7 +18,9 @@
 }
 
 body {
+    font-family: 'Merriweather Sans', sans-serif;
     font-family: "Roboto";
+    font-family: 'Merriweather', serif;
     transition: all .3s ease-in;
     font-size: 17px;
     margin: 0px;
@@ -350,6 +352,6 @@ body {
 /* footer */
 .footer{
 background-color: var(--primary);
-padding: 15px 25px;
+padding: 50px 25px;
 color: white;
 }
