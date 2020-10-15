@@ -2,6 +2,7 @@
     --main: ;
     --accent: ;
     --primary: #00B637;
+    --secondary: #2F5AB5;
     --black: #282828;
     --border-radius: 4px;
     --mainFont: ;
@@ -15,6 +16,10 @@
 
 .primary-text-color {
     color: var(--primary);
+}
+
+.secondary-text-color {
+    color: var(--secondary);
 }
 
 body {
@@ -348,6 +353,20 @@ body {
     border-radius: 3px
 }
 
+/* header */
+
+.header{
+    /* position: absolute; */
+    height: 400px;
+    background-color: #DDDDDD;
+    padding: 50px 20px;
+}
+
+.header-des{
+    position: relative;
+    top: 5%;
+    left: 25%;
+}
 
 /* footer */
 .footer{
