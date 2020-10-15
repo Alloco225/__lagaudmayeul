@@ -345,3 +345,11 @@ body {
     padding-left: 10px;
     border-radius: 3px
 }
+
+
+/* footer */
+.footer{
+background-color: var(--primary);
+padding: 15px 25px;
+color: white;
+}
