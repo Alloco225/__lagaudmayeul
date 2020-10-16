@@ -1,1 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rejoins les 500 pour participer à la campagne Adjemin pendant 10 jours.">
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Mobile Css -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/adjemin.css">
+    <link rel="stylesheet" href="../css/forms.css">
+    <title>Adjemin - Devenir Ambassadeur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/intlTelInput.css">
+
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="../css/500.css">
+
+
+    <style>
+        .text500 {
+            font-family: 'Merienda One', cursive;
+            font-weight: bold;
+            /* color: #2DC068; */
+        }
+
+        .text-link {
+            text-decoration: underline;
+            text-decoration-color: #2DC068;
+        }
+
+        input.is-invalid::placeholder {
+            color: red;
+        }
+
+        input.is-invalid {
+            color: red !important;
+        }
+        .text-area{
+            border: none;
+            width: 100%;
+            background: #094e920c;
+        }
+    </style>
+</head>
+
+<body class="">
+    <div id="fixed-area" class="bg-pale text-primary text-center"
+        style="background:url('../images/bg/img_mountains.jpg');background-position:center right;background-repeat:no-repeat;background-size:cover;">
+        <div id="position-relative" class="container px-4" style="display: none;">
+            
+            
+        </div>
+    </div> <!-- /fixed area -->
+    <div id="flex-area" class="">
+        <div id="form-area" class=" ">
+            <div id="formarea-container" class="container-fluid">
+                <div class="container-fluid mt-1" id="form-container">
+                    <div class="d-flex justify-content-center">
+                        
+                        <h2 class="text-secondary font-weight-bold text-center d-none">
+                            Bravo !
+                        </h2>
+                        
+                        <h1 class="text-secondary font-weight-bold text-center">
+                            Deviens Ambassadeur
+                        </h1>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <img src="img/logo.png" alt="" class="mx-auto" width="100px" height="auto">
+                    </div>
+                    
+                    <div id="mailing-list" class="my-3 p-3 text-center d-none">
+                        <div class="mb-2">
+                            <h4>
+                                Merci d'avoir rejoint les <span class="text500">500</span>,
+                                <span class="text-capitalize text-secondary text500">
+                                    <!-- Name -->
+                                </span>
+                                !
+                            </h4>
+                        </div>
+                        <div>
+                            <p class="text-center">
+
+                                <br>
+                                N'oublie pas de <a href="" title="Cliquez ici"
+                                    target="_blank"><b class="text-secondary text-link">>PARTAGER<</a> </b> les
+                                            publications <a href="" target="_blank"><span
+                                                class="text-secondary text-link">Facebook de Adjemin</span></a> à <b
+                                    class="text-secondary"> 12:12 </b> à partir du <b class="text-secondary">lundi 17
+                                    Aout 2020</b>.
+                            </p>
+                            <p class="text-center">
+                                <br>
+
+                                Contacte-nous via
+                                <a href="mailto:hello@adjemin.com" class="text-secondary">hello@adjemin.com</a>
+                                ou <a href="tel:+22584400483" class="text-secondary">+225 84 400 483</a> si tu as des
+                                questions.
+                            </p>
+
+                            <a href="/" class="btn btn-secondary">Retourner à l'Acceuil</a>
+                        </div>
+                    </div>
+                    
+                    <div id="mailing-list" class="my-3 p-3 text-center">
+                        <div class=" mb-2 text-secondary">
+                            <h4>
+                                Rejoins les <span class="text500">500</span>
+                            </h4>
+                        </div>
+                        <div>
+                            <p class="text-center">
+                                Rejoins les <span class="text500">500</span> pour participer à la campagne Adjemin
+                                pendant 10 jours.
+
+                                Les <span class="text500">500</span> sont des ambassadeurs bénévoles qui participent à
+                                la Communication de Adjemin en cliquant sur le bouton <a
+                                    href="" title="Cliquez ici" target="_blank"><b
+                                        class="text-secondary text-link"> >PARTAGER< </a> </b> des publications <a
+                                            href="" target="_blank"><span
+                                                class="text-secondary text-link">Facebook de Adjemin</span></a> pendant
+                                10 jours à <b class="text-secondary"> 12:12 </b> à partir du <b class="text-secondary">
+                                    lundi 17 Aout 2020</b>.
+                            </p>
+                            <p class="text-center">
+                                Une fois par jour vous allez cliquer sur partager pour soutenir le lancement de notre
+                                communauté Adjemin. <br>
+                                Des questions ?
+                                Contacte-nous via
+                                <a href="mailto:hello@adjemin.com" class="text-secondary">hello@adjemin.com</a>
+                                ou <a href="tel:+22584400483" class="text-secondary">+225 84 400 483</a>
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                    <form action="{{route('ambassadors.store" method="POST" id="form500">
+                        
+                        <!-- Perso info inputgroup -->
+                        <div class="inputgroup">
+                            <!-- First name last name -->
+                            <div class="cool-row ">
+                                <div class="pt-3 cool-input-half">
+                                    <div class="cool-input">
+                                        <span class="prepend">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <input type="text" class="input -is-invalid "
+                                            placeholder="Nom"
+                                            name="last_name" required value="">
+                                    </div>
+                                </div> <!-- /pt-3 cool-input-half -->
+                                <div class="pt-3 cool-input-half">
+                                    <div class="cool-input">
+                                        <span class="prepend">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <input type="text" class="input -is-invalid "
+                                            placeholder="Prénom"
+                                            name="first_name" required value="">
+                                    </div>
+                                </div> <!-- /pt-3 cool-input-half -->
+                            </div> <!-- /cool-row -->
+                            <div class="cool-row">
+                                <span
+                                    class="text-danger">
+                                    <!-- Message first_name -->
+                                </span>
+                                <span
+                                class="text-danger ">
+                                    <!-- Message first_name -->
+                                </span>
+                            </div>
+                            <div class="cool-row">
+                                <div class="pt-3 cool-input-half">
+                                    <div class="cool-input">
+                                        <span class="prepend">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        </span>
+                                        <input type="email" class="input -is-invalid "
+                                            placeholder="Adresse email"
+                                            name="email" required value="">
+                                    </div>
+                                </div> <!-- /pt-3 cool-input-half -->
+                                <div class="pt-3 cool-input-half">
+                                    <div class="cool-input">
+                                        <span class="prepend">
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        </span>
+                                        <input type="tel" class="input -is-invalid "
+                                            placeholder="Numéro Whatsapp"
+                                            name="whatsapp_number" id="whatsapp_number" required>
+                                    </div>
+                                </div> <!-- /pt-3 cool-input-half -->
+                                <!-- div class="pt-3 cool-input-half position-relative">
+                                    <div class="cool-input">
+                                        <input type="text" name="phone_number"
+                                            class="input -is-invalid " id="phone_number"
+                                            placeholder="Numéro de telephone" data-msg="x"
+                                            style="display: inline-block;" value="" />
+                                        <input type="hidden" name="dial_code" id="dial_code">
+                                        <input type="hidden" name="country_code" id="country_code" value="" />
+                                    </div>
+                                </!-- --> <!-- /pt-3 cool-input-half -->
+                            </div> <!-- /cool-row -->
+                            <div class="cool-row">
+                                <span
+                                    class="text-danger">
+                                    <!-- @error('email') -->
+                                </span>
+                                <span
+                                    class="text-danger ">
+                                    <!-- @error('phone_number') -->
+                                </span>
+                            </div>
+                            <div class="cool-row">
+                                <span id="valid-msg" class="hide"></span>
+                                <span id="error-msg" class="hide" style="color:red;"></span>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="cool-row">
+                                <div class="pt-3 cool-input-full">
+                                    <div class="cool-input">
+                                        <span class="prepend">
+                                            <i class="fa fa-send" aria-hidden="true"></i>
+                                        </span>
+                                        <!-- <input type="tel" class="input -is-invalid "
+                                            placeholder="Numéro Whatsapp"
+                                            name="whatsapp_number" id="whatsapp_number" required> -->
+                                            <textarea name="message" id="input-message" class="text-area" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div> <!-- /pt-3 cool-input-half -->
+                            </div> <!-- /cool-row -->
+                        </div>
+                        <div class="cool-row">
+                            <span
+                                class="text-danger ">
+                                <!-- @error('whatsapp_number') -->
+                            </span>
+                        </div>
+                        <!-- Submit -->
+                        <div class="text-center">
+                            <input type="submit" id="sumbmitform" onclick="event.preventDefault();"
+                                class="btn btn-secondary p-3 my-3 font-weight-bold text-uppercase mt-5"
+                                value="Rejoindre">
+                        </div>
+                </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <script>
+        //
+        var $input = {
+            first_name: $("#first_name"),
+            last_name: $("#last_name"),
+            email: $("#email"),
+            phone_number: $("#phone_number"),
+            whatsapp_number: $("#whatsapp_number"),
+        }
+
+        $input.phone_number.on('keyup', function () {
+
+            // if($("#dial_code").val() == ''){
+
+            $input.whatsapp_number.val($(this).val())
+            // }else{
+            //     $input.whatsapp_number.val($("#dial_code").val()+$(this).val())
+            // }
+        });
+
+
+        function validateForm() {
+            if ($input.first_name == null) {
+                alert('');
+            }
+            if ($input.first_name == null) {
+                alert('');
+            }
+            if ($input.first_name == null) {
+                alert('');
+            }
+            if ($input.first_name == null) {
+                alert('');
+            }
+        }
+        //
+    </script>
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone_number");
+
+        var errorMsg = document.querySelector("#error-msg"),
+            validMsg = document.querySelector("#valid-msg"),
+            form500 = document.querySelector("#form500");
+
+
+        var errorMap = ["&#65794; Numéro Invalide !", "&#65794; Code de pays invalide !",
+            "&#65794; Numéro de téléphone Trop Court", "&#65794; Numéro de téléphone Trop Long",
+            "&#65794; Numéro Invalide"
+        ];
+        var iti = window.intlTelInput(input, {
+            dropdownContainer: document.body,
+            separateDialCode: true,
+            initialCountry: "CI",
+            geoIpLookup: function (success, failure) {
+                $.get("https://ipinfo.io", function () {}, "jsonp").always(function (resp) {
+                    var countryCode = (resp && resp.country) ? resp.country : "";
+                    success(countryCode);
+                });
+            },
+            placeholderNumberType: "MOBILE",
+            preferredCountries: ['ci'],
+            utilsScript: "js/utils.js?",
+        });
+        var reset = function () {
+            input.classList.remove("error");
+            errorMsg.innerHTML = "";
+            errorMsg.classList.add("hide");
+            validMsg.classList.add("hide");
+        };
+
+        // on blur: validate
+        input.addEventListener('blur', function () {
+            reset();
+            if (input.value.trim()) {
+                if (iti.isValidNumber()) {
+                    $("#dial_code").val(iti.getSelectedCountryData().dialCode);
+                    // $("#phone_number").val(iti.);
+                    $("#country_code").val(iti.getSelectedCountryData().iso2.toUpperCase());
+                    // $()
+                    // console
+                    if ($("#dial_code").val() == '') {
+                        $('#whatsapp_number').val("225" + $(this).val())
+                    } else {
+                        $('#whatsapp_number').val($("#dial_code").val() + $("#phone_number").val())
+                    }
+                    form500.submit();
+
+                    // $("#whatsapp_number").val($("#dial_code").value+$("#phone_number").value);
+                    //console.log(iti.s.phone);
+                    validMsg.classList.remove("hide");
+                } else {
+                    input.classList.add("error");
+                    var errorCode = iti.getValidationError();
+                    // console.log("Error from intInput");
+                    // console.log(errorCode);
+                    errorMsg.innerHTML = errorMap[errorCode];
+                    errorMsg.classList.remove("hide");
+                }
+            }
+        });
+
+        // on keyup / change flag: reset
+        input.addEventListener('change', reset);
+        input.addEventListener('keyup', reset);
+    </script>
+
+</body>
+
+</html>
