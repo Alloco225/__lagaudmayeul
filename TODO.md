@@ -7,7 +7,11 @@
 ## FRONT OFFICE
 
 ### PAGE ACCUEIL
-  [ ] : 
+  [ ] : Mobile navigation
+    [ ]: animated cross
+    [ ]: animated averlay
+    [ ]: dropdown
+
   [ ] : 
   [ ] : 
   [ ] : 
