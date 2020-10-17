@@ -114,5 +114,62 @@ $(document).ready(function () {
         })
     // circle 4
     
-    ;
+        ;
+    // Rotating lines around their bottom axises
+    // var lines_rotating = gsap.to(circle_kernel_lines, 3, {
+    //     rotate: 380, transformOrigin: "bottom right",
+    //     ease: "none",
+    // });
+    
+    var ckl = new TimelineMax();
+    ckl.to(circle_kernel_lines, 600, {
+        rotation: 3600,
+        ease: "none",
+        transformOrigin: "bottom right",
+    });
+    // var cko = new TimelineMax();
+    // cko.to(circle_kernel_orbs, 600, {
+    //     rotation: 630,
+    //     ease: "none",
+    //     transformOrigin: "50px 50px",
+    // });
+    
+    var c1l = new TimelineMax();
+    c1l.to(circle_1_lines, 60, {
+        rotation: -3600,
+        ease: "none",
+        transformOrigin: "bottom right",
+    });
+
+    
+    var c4l = new TimelineMax();
+    c4l.to(circle_4_lines, 120, {
+        rotation: 8000,
+        ease: "none",
+        transformOrigin: "bottom right",
+    });
+
+    tl.then(
+        function () {
+            
+            
+            var c2l = new TimelineMax();
+            c2l.to(circle_2_lines, 60, {
+                rotation: 300,
+                ease: "none",
+                transformOrigin: "bottom right",
+            });
+            var c3l = new TimelineMax();
+            c3l.to(circle_3_lines, 70, {
+                rotation: -300,
+                ease: "none",
+                transformOrigin: "bottom right",
+            });
+
+        }
+    );
+
+    setInterval(() => {
+        // tr.reverse().restart();
+    }, 5000);
 });
