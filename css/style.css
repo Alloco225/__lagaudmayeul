@@ -12,6 +12,11 @@
     --linkFont: ;
 }
 
+.material-icons{
+    vertical-align: middle !important;
+    /* font-size: inherit; */
+}
+
 /*NAVBAR*/
 
 .primary-text-color {

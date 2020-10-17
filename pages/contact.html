@@ -8,11 +8,19 @@
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <!-- Mobile Css -->
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/adjemin.css">
     <link rel="stylesheet" href="../css/forms.css">
-    <title>Adjemin - Devenir Ambassadeur</title>
+
+    <title>
+        
+    </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
@@ -49,7 +57,7 @@
         .text-area{
             border: none;
             width: 100%;
-            background: #094e920c;
+            background: #f3f7fa;
         }
     </style>
 </head>
@@ -66,6 +74,12 @@
         <div id="form-area" class=" ">
             <div id="formarea-container" class="container-fluid">
                 <div class="container-fluid mt-1" id="form-container">
+                    <div class="row">
+                        <a href="/index.html">
+                        <i class="material-icons font-weight-bold fs-b">arrow_back</i> 
+                            Retour
+                        </a>
+                    </div>
                     <div class="d-flex justify-content-center">
                         
                         <h2 class="text-secondary font-weight-bold text-center d-none">
@@ -73,7 +87,7 @@
                         </h2>
                         
                         <h1 class="text-secondary font-weight-bold text-center">
-                            Deviens Ambassadeur
+                            Contactez-nous
                         </h1>
                     </div>
                     <div class="d-flex justify-content-center">
@@ -117,31 +131,14 @@
                     <div id="mailing-list" class="my-3 p-3 text-center">
                         <div class=" mb-2 text-secondary">
                             <h4>
-                                Rejoins les <span class="text500">500</span>
+                                Vous avez un message ? Une question ? Un projet ?
                             </h4>
                         </div>
                         <div>
                             <p class="text-center">
-                                Rejoins les <span class="text500">500</span> pour participer à la campagne Adjemin
-                                pendant 10 jours.
-
-                                Les <span class="text500">500</span> sont des ambassadeurs bénévoles qui participent à
-                                la Communication de Adjemin en cliquant sur le bouton <a
-                                    href="" title="Cliquez ici" target="_blank"><b
-                                        class="text-secondary text-link"> >PARTAGER< </a> </b> des publications <a
-                                            href="" target="_blank"><span
-                                                class="text-secondary text-link">Facebook de Adjemin</span></a> pendant
-                                10 jours à <b class="text-secondary"> 12:12 </b> à partir du <b class="text-secondary">
-                                    lundi 17 Aout 2020</b>.
+                                Ecrivez-moi et discutons-en !
                             </p>
-                            <p class="text-center">
-                                Une fois par jour vous allez cliquer sur partager pour soutenir le lancement de notre
-                                communauté Adjemin. <br>
-                                Des questions ?
-                                Contacte-nous via
-                                <a href="mailto:hello@adjemin.com" class="text-secondary">hello@adjemin.com</a>
-                                ou <a href="tel:+22584400483" class="text-secondary">+225 84 400 483</a>
-                            </p>
+                            
                         </div>
                         
                     </div>
@@ -157,19 +154,18 @@
                                         <span class="prepend">
                                             <i class="fa fa-user" aria-hidden="true"></i>
                                         </span>
-                                        <input type="text" class="input -is-invalid "
-                                            placeholder="Nom"
-                                            name="last_name" required value="">
+                                        <input type="text" class="input -is-invalid " placeholder="Nom et prénom" name="name" required value="">
                                     </div>
                                 </div> <!-- /pt-3 cool-input-half -->
                                 <div class="pt-3 cool-input-half">
                                     <div class="cool-input">
+                                        <i class="material-icons ml-2" aria-hidden="true">assignment_ind</i>
                                         <span class="prepend">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
                                         </span>
                                         <input type="text" class="input -is-invalid "
-                                            placeholder="Prénom"
-                                            name="first_name" required value="">
+                                            placeholder="Sujet"
+                                            name="subject" required value="">
                                     </div>
                                 </div> <!-- /pt-3 cool-input-half -->
                             </div> <!-- /cool-row -->
@@ -187,7 +183,7 @@
                                 <div class="pt-3 cool-input-half">
                                     <div class="cool-input">
                                         <span class="prepend">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <i class="material-icons"> email</i>
                                         </span>
                                         <input type="email" class="input -is-invalid "
                                             placeholder="Adresse email"
@@ -234,11 +230,9 @@
                                 <div class="pt-3 cool-input-full">
                                     <div class="cool-input">
                                         <span class="prepend">
-                                            <i class="fa fa-send" aria-hidden="true"></i>
+                                            <!-- <i class="fa fa-send" aria-hidden="true"></i> -->
+                                            <i class="material-icons">message</i>
                                         </span>
-                                        <!-- <input type="tel" class="input -is-invalid "
-                                            placeholder="Numéro Whatsapp"
-                                            name="whatsapp_number" id="whatsapp_number" required> -->
                                             <textarea name="message" id="input-message" class="text-area" cols="30" rows="10"></textarea>
                                     </div>
                                 </div> <!-- /pt-3 cool-input-half -->
@@ -252,9 +246,12 @@
                         </div>
                         <!-- Submit -->
                         <div class="text-center">
-                            <input type="submit" id="sumbmitform" onclick="event.preventDefault();"
-                                class="btn btn-secondary p-3 my-3 font-weight-bold text-uppercase mt-5"
-                                value="Rejoindre">
+
+                            <a type="submit" id="sumbmitform" onclick="event.preventDefault();"
+                                class="btn btn-secondary p-3 my-3 font-weight-bold text-uppercase mt-5">
+                                Envoyer
+                                <i class="fa fa-send ml-2"></i>
+                            </a>
                         </div>
                 </div>
                 </form>
