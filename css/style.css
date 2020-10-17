@@ -405,3 +405,13 @@ color: white;
     bottom: -10%;
     border-radius:5px;
 }
+
+.article-link{
+    color:black;
+}
+
+.article-link:hover{
+    color: var(--primary);
+    transition:ease-in, .4s;
+    font-weight: 500;
+}
