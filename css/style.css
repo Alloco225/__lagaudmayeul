@@ -340,6 +340,19 @@ body {
     width: 100%;
 }
 
+.blog-details-header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, .712)), url('../images/bg/img_5terre_wide.jpg');
+    width: 100%;
+    height: 260px;
+    background-size: cover;
+    position: relative;
+}
+
+.blog-details-header .des{
+    position: absolute;
+    top:30%
+}
+
 .section__two {
     padding: 50px;
     background-color: white;
@@ -475,7 +488,21 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 0!important;
-    color: #8a8a8a;
+    color: #797575;
     border: 1px solid #f0e9ff;
     margin-right: 10px;
+}
+
+.breadcrumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    color: white;
+    /* background-color: #e9ecef; */
+    border-radius: 0.25rem;
 }
