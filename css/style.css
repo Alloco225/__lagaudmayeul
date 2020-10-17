@@ -10,10 +10,9 @@
     --titleFont: ;
     --bodyFont: ;
     --linkFont: ;
-
 }
 
-.material-icons{
+.material-icons {
     vertical-align: middle !important;
     /* font-size: inherit; */
 }
@@ -23,6 +22,7 @@
 .primary-text-color {
     color: var(--primary);
 }
+
 .white-text-color {
     color: white;
 }
@@ -366,32 +366,32 @@ body {
 
 /* header */
 
-.header{
+.header {
     /* position: absolute; */
     height: 400px;
     background-color: #DDDDDD;
     padding: 50px 20px;
 }
 
-.header-des{
+.header-des {
     position: relative;
     top: 5%;
     left: 25%;
 }
 
 /* footer */
-.footer{
-background-color: var(--primary);
-padding: 50px 25px;
-color: white;
+
+.footer {
+    background-color: var(--primary);
+    padding: 50px 25px;
+    color: white;
 }
 
-.img-radius{
+.img-radius {
     border-radius: 4px 4px 0px 0px;
 }
 
-
-.illustration-img{
+.illustration-img {
     background-image: url('../images/bg/img_5terre_wide.jpg');
     width: 100%;
     height: 200px;
@@ -399,8 +399,8 @@ color: white;
     position: relative;
 }
 
-.date-card{
-    background-color:red;
+.date-card {
+    background-color: red;
     padding: 30px;
     padding: 15px;
     /* width: 65px;
@@ -408,15 +408,74 @@ color: white;
     position: absolute;
     left: 10%;
     bottom: -10%;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
-.article-link{
-    color:black;
+.article-link {
+    color: black;
 }
 
-.article-link:hover{
+.article-link:hover {
     color: var(--primary);
-    transition:ease-in, .4s;
+    transition: ease-in, .4s;
     font-weight: 500;
+}
+
+.theme-link {
+    padding: 5px 15px;
+    color: black;
+    font-weight: normal;
+    border: 1px solid rgb(216, 212, 212);
+    font-style: 13px;
+}
+
+.theme-link:hover {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+}
+
+.input-style {
+    background: #EEEEEE;
+    height: 49px;
+    border: none;
+}
+
+.submit-button{
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.divider{
+    height: 3px;
+    max-width: 50px;
+    background-color: var(--primary);
+}
+
+/* pagination */
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.blog-pagination .page-link {
+    font-size: 14px;
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+    margin-left: -1px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    border-radius: 0!important;
+    color: #8a8a8a;
+    border: 1px solid #f0e9ff;
+    margin-right: 10px;
 }
