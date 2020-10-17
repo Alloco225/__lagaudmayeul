@@ -10,12 +10,16 @@
     --titleFont: ;
     --bodyFont: ;
     --linkFont: ;
+
 }
 
 /*NAVBAR*/
 
 .primary-text-color {
     color: var(--primary);
+}
+.white-text-color {
+    color: white;
 }
 
 .secondary-text-color {
@@ -26,8 +30,10 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     font-family: "Roboto";
     font-family: 'Merriweather', serif;
-    transition: all .3s ease-in;
+    font-weight: 500;
+    /* transition: all .3s ease-in; */
     font-size: 17px;
+    font-size: .925rem;
     margin: 0px;
     background: #EFEFEF;
 }
@@ -373,4 +379,29 @@ body {
 background-color: var(--primary);
 padding: 50px 25px;
 color: white;
+}
+
+.img-radius{
+    border-radius: 4px 4px 0px 0px;
+}
+
+
+.illustration-img{
+    background-image: url('../images/bg/img_5terre_wide.jpg');
+    width: 100%;
+    height: 200px;
+    border-radius: 5px 5px 0px 0px;
+    position: relative;
+}
+
+.date-card{
+    background-color:red;
+    padding: 30px;
+    padding: 15px;
+    /* width: 65px;
+    height: 65px; */
+    position: absolute;
+    left: 10%;
+    bottom: -10%;
+    border-radius:5px;
 }
