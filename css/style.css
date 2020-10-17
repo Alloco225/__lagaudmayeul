@@ -343,14 +343,14 @@ body {
 .blog-details-header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, .712)), url('../images/bg/img_5terre_wide.jpg');
     width: 100%;
-    height: 250px;
+    height: 260px;
     background-size: cover;
     position: relative;
 }
 
 .blog-details-header .des{
     position: absolute;
-    top:35%
+    top:30%
 }
 
 .section__two {
