@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +13,62 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--  -->
     <style>
-        body{
-            background: #2b4d63
+        body {
+            background: #2b4d63;
+            margin: 0;
         }
-        #Layer_1{
-            display:block;
+
+        #Layer_1 {
+            display: block;
             margin: 0 auto;
         }
-        .header{
-            
+
+        .header {
+
             position: relative;
+            height: 100vh;
+            overflow:hidden;
+            
         }
+        .svg_planet{
+            position:absolute;
+            right: -160px;
+            bottom: -170px;
+        }
+        .header-img{
+            position:absolute;
+            z-index: 3;
+            bottom: 0;
+            right: 0;
+            /*
+            animation-name: popup;
+            animation-duration: .5s; 
+            animation-iteration-count: 1;
+            transition: 1s;*/
+        }
+        /*@keyframes popup{
+            0%{
+                bottom: -300px;
+                opacity: 0;
+            }
+            100%{
+                bottom: 0;
+                opacity: 1;
+            }
+        }*/
     </style>
 </head>
+
 <body>
-    
+
     <!-- <svg width="100px" height="100px">
         <circle cx="50" cy="50" r="40" fill="yellow" stroke-width="4px" stroke="black"/>
 
     </svg> -->
     <div class="header">
-        <svg width="1383" id="svg_planet" height="1054" viewBox="0 0 1383 1054" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <img src="../../images/avatar/avatar3_transparent.png" class="header-img" alt="">
+        <svg width="1383" id="svg_planet" class="svg_planet" height="1054" viewBox="0 0 1383 1054" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path id="circle_4"
                 d="M969.696 0C570.653 0 247.164 300.074 247.164 670.233C245.35 774.028 258.652 850.99 282.778 907H941.932H1228V44.0997C1147.79 15.6094 1060.71 0 969.696 0Z"
                 fill="#999999" />
@@ -62,7 +98,7 @@
             <line x1="1219.34" y1="899.925" x2="395.523" y2="800.971" stroke="#EEEEEE" stroke-width="8" />
             <circle cx="657" cy="413" r="24" fill="#EEEEEE" />
             <line x1="1225.42" y1="899.007" x2="654.417" y2="416.054" stroke="#EEEEEE" stroke-width="8" />
-            <path id="circle_1" 
+            <path id="circle_1"
                 d="M1115.83 468C942.547 468 802.071 613.57 802.071 793.141C801.284 843.493 807.06 880.829 817.536 908H1103.77H1228V489.393C1193.17 475.572 1155.35 468 1115.83 468Z"
                 fill="#EEEEEE" />
             <circle class="kernel_orbs" cx="907" cy="137" r="24" fill="white" />
@@ -76,17 +112,17 @@
 
     <button class="play">Play</button>
 
-<script>
-    //$(".play").click(function(){    
- 
-        var tl = new TimelineMax();  
+    <script>
+        //$(".play").click(function(){    
+
+        var tl = new TimelineMax();
         var circle_kernel = "#circle_kernel";
         var circle_kernel_orbs = '.kernel_orbs';
         var circle_kernel_lines = 'line[stroke="white"]';
         var circle_1 = "#circle_1";
         var circle_1_orbs = 'circle[fill="#EEEEEE"]';
         var circle_1_lines = 'line[stroke="#EEEEEE"]';
- 
+
         var circle_2 = "#circle_2";
         var circle_2_orbs = 'circle[fill="#CCCCCC"], circle[fill="#C4C4C4"]';
         var circle_2_lines = 'line[stroke="#CCCCCC"], line[stroke="#C4C4C4"]';
@@ -102,58 +138,94 @@
         var c4d = .5;
         var od = .2;
         tl
-        .from(circle_kernel, .4, {
-        scale: 0, transformOrigin: "center", ease: Power2.easeOut,
-        })
-        .from(circle_kernel_lines, .4, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_kernel_orbs, .2, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        // circle 1 
-        .from(circle_1_lines, c1d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_1_orbs, .2, {
-        scale: 0, transformOrigin: "center", ease: Power2.easeOut,
-        })
-        .from(circle_1, c1d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        // circle 2
-        .from(circle_2, c2d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_2_lines, c2d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_2_orbs, .2, {
-        scale: 0, transformOrigin: "center", ease: Power2.easeOut,
-        })
-        // circle 3
-        .from(circle_3, c3d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
+            .from(circle_kernel, .4, {
+                scale: 0,
+                transformOrigin: "center",
+                ease: Power2.easeOut,
+            })
+            .from(circle_kernel_lines, .4, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_kernel_orbs, .2, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            // circle 1 
+            .from(circle_1_lines, c1d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_1_orbs, .2, {
+                scale: 0,
+                transformOrigin: "center",
+                ease: Power2.easeOut,
+            })
+            .from(circle_1, c1d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            // circle 2
+            .from(circle_2, c2d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_2_lines, c2d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_2_orbs, .2, {
+                scale: 0,
+                transformOrigin: "center",
+                ease: Power2.easeOut,
+            })
+            // circle 3
+            .from(circle_3, c3d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            // circle 4
+            .from(circle_4, c4d, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_4_lines, .4, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_4_orbs, .2, {
+                scale: 0,
+                transformOrigin: "center",
+                ease: Power2.easeOut,
+            })
+            // circle 3
+            .from(circle_3_lines, .4, {
+                scale: 0,
+                transformOrigin: "bottom right",
+                ease: Power2.easeOut,
+            })
+            .from(circle_3_orbs, .2, {
+                scale: 0,
+                transformOrigin: "center",
+                ease: Power2.easeOut,
+            })
+            .from('.header-img', .2, {
+                y: 500,
+                opacity: 0,
+                
+                ease: Power2.easeOut,
+            })
         // circle 4
-        .from(circle_4, c4d, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_4_lines, .4, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_4_orbs, .2, {
-        scale: 0, transformOrigin: "center", ease: Power2.easeOut,
-        })
-        // circle 3
-        .from(circle_3_lines, .4, {
-        scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
-        })
-        .from(circle_3_orbs, .2, {
-        scale: 0, transformOrigin: "center", ease: Power2.easeOut,
-        })
-        // circle 4
-        
+
         ;
         // outter most ring
         /*
@@ -212,10 +284,10 @@
         */
         // TODO add rotation
         // TODO add infinite glowing effect
-    //});
-</script>
-<script>
-    /*
+        //});
+    </script>
+    <script>
+        /*
     // outter most ring
     .staggerFrom(circle_4_lines, .6, {
     scale: 0, transformOrigin: "bottom right", ease: Power2.easeOut,
@@ -270,6 +342,7 @@
     scale: 0, transformOrigin: "center", ease: Power2.easeOut,
     });
     */
-</script>
+    </script>
 </body>
+
 </html>
