@@ -9,11 +9,11 @@
     <!-- Fonts -->
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+        rel="stylesheet">
     <!-- Merriweather Font -->
     <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- Merriweather Sans Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
@@ -35,14 +35,66 @@
     <script src="https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-     <!-- Svg animation -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-         integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-         crossorigin="anonymous"></script>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     
+    <!-- Svg animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-     <!-- Custom style -->
+    <!-- Mobile drawer -->
+    <style>
+        /*Drawer Aside*/
+        .mobile-drawer {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .mobile-drawer a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .mobile-drawer a:hover {
+            color: #f1f1f1;
+        }
+
+        .mobile-drawer .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        main {
+            position: relative;
+            transition: margin-left .5s;
+
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    <!-- Custom style -->
     <style>
         body {
             margin: 0;
@@ -78,25 +130,33 @@
             transition: 1s;*/
         }
 
-    </style>
-    <!-- Scrollbar -->
-    <style>
-        
-    </style>
-    <!-- Preloader -->
-    <style>
-        
+        /* Drawer icon button */
+        .drawer-icon {
+            display: inline-block;
+            position: relative;
+            position: fixed;
+            top: 0;
+            margin: 5px;
+        }
+
+        .drawer-icon div {
+            height: 3px;
+            margin-bottom: 4px;
+            width: 24px;
+            background: #282828;
+
+        }
     </style>
     <!-- Shimmer loading -->
     <style>
         /* Shimmer Mobile */
-        @media screen and (max-width: 20px){
-            
+        @media screen and (max-width: 20px) {
+
             box {
                 height: 104px;
                 width: 100px;
             }
-    
+
             .preloader div {
                 display: inline-flex;
                 flex-direction: column;
@@ -104,61 +164,66 @@
                 margin-top: 15px;
                 vertical-align: top;
             }
-    
+
             lines {
                 height: 10px;
                 margin-top: 10px;
                 width: 200px !important;
             }
-    
+
             photo {
-                display: block!important;
+                display: block !important;
                 width: 325px !important;
                 height: 100px;
                 margin-top: 15px;
             }
-            .shine {
-            background: #f6f7f8;
-            background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
-            background-repeat: no-repeat;
-            background-size: 800px 104px;
-            display: inline-block;
-            position: relative;
 
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-            animation-name: placeholderShimmer;
-            animation-timing-function: linear;
-            -webkit-animation-duration: 1s;
-            -webkit-animation-fill-mode: forwards;
-            -webkit-animation-iteration-count: infinite;
-            -webkit-animation-name: placeholderShimmer;
-            -webkit-animation-timing-function: linear;
+            .shine {
+                background: #f6f7f8;
+                background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+                background-repeat: no-repeat;
+                background-size: 800px 104px;
+                display: inline-block;
+                position: relative;
+
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-name: placeholderShimmer;
+                animation-timing-function: linear;
+                -webkit-animation-duration: 1s;
+                -webkit-animation-fill-mode: forwards;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-name: placeholderShimmer;
+                -webkit-animation-timing-function: linear;
             }
 
         }
+
         /* Todo : Shimmer Tablets */
         /* Shimmer Desktop */
-        topNav{
+        topNav {
             display: flex;
         }
-        brand{
+
+        brand {
             height: 150px;
             width: 150px;
         }
-        titles{
+
+        titles {
             margin-left: 20px;
             display: flex;
             flex-direction: column;
             position: relative;
             width: 100%;
         }
-        headline{
+
+        headline {
             height: 30px;
             width: 100%;
         }
-        
+
         .preloader div {
             display: inline-flex;
             flex-direction: column;
@@ -174,7 +239,7 @@
         }
 
         photo {
-            display: block!important;
+            display: block !important;
             width: 100%;
             height: 100px;
             margin-top: 15px;
@@ -202,27 +267,28 @@
 
         @keyframes placeholderShimmer {
             0% {
-            background-position: -468px 0;
+                background-position: -468px 0;
             }
 
             100% {
-            background-position: 468px 0;
+                background-position: 468px 0;
             }
         }
+
         @-webkit-keyframes placeholderShimmer {
             0% {
-            background-position: -468px 0;
+                background-position: -468px 0;
             }
 
             100% {
-            background-position: 468px 0;
+                background-position: 468px 0;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="preloader">
+    <!-- <div class="preloader">
         <box class="shine"></box>
         <topNav>
             <brand class="shine"></brand>
@@ -265,281 +331,327 @@
         </div>
         <photo class="shine"></photo>
 
-    </div>
-    <section>
-        <!-- NAVBAR -->
-        <nav class="navigation-bar">
-            <div class="container">
-                <div class="navigation-bar__block">
-                    <a href="index.html" class="brand-link">
-                        <h5 class="navigation-bar__logo">LAGAUD MAYEUL</h5>
-                    </a>
-                    <ul class="navigation-bar__menu mb-0">
-                        <li class="navigation-bar__item">
-                            <a href="index.html" class="navigation-bar__link nav-color font-weight-bold">Accueil
+    </div> -->
+    <aside id="mobileDrawer" class="mobile-drawer">
+        <div  class="">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </aside>
+    <main id="pageBody" class="page-body">
+
+        <section>
+            <!-- NAVBAR -->
+            <nav class="navigation-bar">
+
+                <div class="container">
+                    <div class="navigation-bar__block">
+                        <div class="drawer-icon" onclick="openNav()">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <a href="index.html" class="brand-link">
+                            <h5 class="navigation-bar__logo">LAGAUD MAYEUL</h5>
+                        </a>
+                        <ul class="navigation-bar__menu mb-0">
+                            <li class="navigation-bar__item">
+                                <a href="index.html" class="navigation-bar__link nav-color font-weight-bold">Accueil
+                                </a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/services.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Services </a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="#" class="navigation-bar__link nav-color font-weight-bold">Activités</a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/blog.html" class="navigation-bar__link nav-color font-weight-bold">Textes
+                                    de lois</a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/contact.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Contact</a>
+                            </li>
+
+                            <a href="#" type="button" class="btn btn-primary mt-1">
+                                Action
                             </a>
-                        </li>
-                        <li class="navigation-bar__item">
-                            <a href="pages/services.html" class="navigation-bar__link nav-color font-weight-bold">Services </a>
-                        </li>
-                        <li class="navigation-bar__item">
-                            <a href="#" class="navigation-bar__link nav-color font-weight-bold">Activités</a>
-                        </li>
-                        <li class="navigation-bar__item">
-                            <a href="pages/blog.html" class="navigation-bar__link nav-color font-weight-bold">Textes de lois</a>
-                        </li>
-                        <li class="navigation-bar__item">
-                            <a href="pages/contact.html"
-                                class="navigation-bar__link nav-color font-weight-bold">Contact</a>
-                        </li>
 
-                        <a href="#" type="button" class="btn btn-primary mt-1">
-                            Action
-                        </a>
+                        </ul>
 
-                    </ul>
-
-                    <div class="hamburger-menu">
-                        <img src="images/menu.svg" class="img-fluid" alt="icon">
-                        <span class="navbar-toggler-icon"></span>
+                        <div class="hamburger-menu">
+                            <img src="images/menu.svg" class="img-fluid" alt="icon">
+                            <span class="navbar-toggler-icon"></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </section>
+            </nav>
+        </section>
 
-    <!-- Header -->
-
-    <section class="header">
-        <div class="">
-            <img src="../../images/avatar/avatar3_transparent.png" class="header-img" alt="">
-            <svg width="1383" id="svg_planet" class="svg_planet" height="1054" viewBox="0 0 1383 1054" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path id="circle_4"
-                    d="M969.696 0C570.653 0 247.164 300.074 247.164 670.233C245.35 774.028 258.652 850.99 282.778 907H941.932H1228V44.0997C1147.79 15.6094 1060.71 0 969.696 0Z"
-                    fill="#999999" />
-                <circle cx="24" cy="875" r="24" fill="#999999" />
-                <line x1="1219.74" y1="899.953" x2="26.9231" y2="876.999" stroke="#999999" stroke-width="8" />
-                <circle cx="157" cy="173" r="24" fill="#999999" />
-                <line x1="1225.76" y1="899.269" x2="154.762" y2="176.315" stroke="#999999" stroke-width="8" />
-                <circle cx="457" cy="137" r="24" fill="#AAAAAA" />
-                <line x1="1225.19" y1="898.804" x2="454.194" y2="139.851" stroke="#AAAAAA" stroke-width="8" />
-                <circle cx="669" cy="216" r="24" fill="#AAAAAA" />
-                <line x1="1224.91" y1="898.493" x2="665.91" y2="218.54" stroke="#AAAAAA" stroke-width="8" />
-                <circle cx="248" cy="720" r="24" fill="#CCCCCC" />
-                <line x1="1227.27" y1="899.887" x2="247.241" y2="719.112" stroke="#CCCCCC" stroke-width="8" />
-                <path id="circle_3"
-                    d="M1033.58 161C730.15 161 484.167 408.139 484.167 713C482.788 798.485 492.903 861.871 511.248 908H1012.47H1230V197.32C1169.01 173.856 1102.79 161 1033.58 161Z"
-                    fill="#AAAAAA" />
-                <circle cx="601" cy="567" r="24" fill="#C4C4C4" />
-                <line x1="1226.14" y1="899.495" x2="599.142" y2="570.542" stroke="#C4C4C4" stroke-width="8" />
-                <circle cx="762" cy="504" r="24" fill="#EEEEEE" />
-                <line x1="1225.42" y1="899.008" x2="759.418" y2="505.055" stroke="#EEEEEE" stroke-width="8" />
-                <circle cx="1148" cy="216" r="24" fill="#CCCCCC" />
-                <line x1="1224.03" y1="896.421" x2="1144.03" y2="216.467" stroke="#CCCCCC" stroke-width="8" />
-                <path id="circle_2"
-                    d="M1071.33 288C829.303 288 633.1 492.791 633.1 745.414C631.999 816.251 640.067 868.775 654.7 907H1054.49H1228V318.097C1179.35 298.653 1126.53 288 1071.33 288Z"
-                    fill="#CCCCCC" />
-                <circle cx="396" cy="797" r="24" fill="#EEEEEE" />
-                <line x1="1219.34" y1="899.925" x2="395.523" y2="800.971" stroke="#EEEEEE" stroke-width="8" />
-                <circle cx="657" cy="413" r="24" fill="#EEEEEE" />
-                <line x1="1225.42" y1="899.007" x2="654.417" y2="416.054" stroke="#EEEEEE" stroke-width="8" />
-                <path id="circle_1"
-                    d="M1115.83 468C942.547 468 802.071 613.57 802.071 793.141C801.284 843.493 807.06 880.829 817.536 908H1103.77H1228V489.393C1193.17 475.572 1155.35 468 1115.83 468Z"
-                    fill="#EEEEEE" />
-                <circle class="kernel_orbs" cx="907" cy="137" r="24" fill="white" />
-                <line x1="1224.32" y1="897.511" x2="903.316" y2="138.558" stroke="white" stroke-width="8" />
-                <circle class="kernel_orbs" cx="907" cy="762" r="24" fill="white" />
-                <line x1="1226.34" y1="911.641" x2="929.345" y2="776.641" stroke="white" stroke-width="8" />
-
-                <circle id="circle_kernel" cx="1228" cy="899" r="155" fill="white" />
-            </svg>
-        </div>
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <p class="primary-text-color h5 font-weight-bold mb-4">Qu'est-ce que le Lorem Ipsum</p>
-                    <p class="h2 font-weight-normal secondary-text-color h1 mb-4">I'm Doctor LAGAUD MAYEUL</p>
-                    <p class="mb-4">
-                        <small>
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant
-                            impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années
-                            1500.
-                        </small>
-                    </p>
-
-                    <a href="#" class="btn btn-primary px-5">Learn more</a>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section__two">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div>
-                        <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
-                        <p class="py-3">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant impression. Le Lorem Ipsum est le faux .
-                        </p>
-                        <p class="py-3">
-                            Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un
-                            imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de
-                            polices de texte.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12" style="background: #2F5AB5;">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="py-5">
-        <div class="container">
+        <!-- Header -->
+        <section class="header">
             <div class="">
-                <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
+                <img src="../../images/avatar/avatar3_transparent.png" class="header-img" alt="">
+                <svg width="1383" id="svg_planet" class="svg_planet" height="1054" viewBox="0 0 1383 1054" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="circle_4"
+                        d="M969.696 0C570.653 0 247.164 300.074 247.164 670.233C245.35 774.028 258.652 850.99 282.778 907H941.932H1228V44.0997C1147.79 15.6094 1060.71 0 969.696 0Z"
+                        fill="#999999" />
+                    <circle cx="24" cy="875" r="24" fill="#999999" />
+                    <line x1="1219.74" y1="899.953" x2="26.9231" y2="876.999" stroke="#999999" stroke-width="8" />
+                    <circle cx="157" cy="173" r="24" fill="#999999" />
+                    <line x1="1225.76" y1="899.269" x2="154.762" y2="176.315" stroke="#999999" stroke-width="8" />
+                    <circle cx="457" cy="137" r="24" fill="#AAAAAA" />
+                    <line x1="1225.19" y1="898.804" x2="454.194" y2="139.851" stroke="#AAAAAA" stroke-width="8" />
+                    <circle cx="669" cy="216" r="24" fill="#AAAAAA" />
+                    <line x1="1224.91" y1="898.493" x2="665.91" y2="218.54" stroke="#AAAAAA" stroke-width="8" />
+                    <circle cx="248" cy="720" r="24" fill="#CCCCCC" />
+                    <line x1="1227.27" y1="899.887" x2="247.241" y2="719.112" stroke="#CCCCCC" stroke-width="8" />
+                    <path id="circle_3"
+                        d="M1033.58 161C730.15 161 484.167 408.139 484.167 713C482.788 798.485 492.903 861.871 511.248 908H1012.47H1230V197.32C1169.01 173.856 1102.79 161 1033.58 161Z"
+                        fill="#AAAAAA" />
+                    <circle cx="601" cy="567" r="24" fill="#C4C4C4" />
+                    <line x1="1226.14" y1="899.495" x2="599.142" y2="570.542" stroke="#C4C4C4" stroke-width="8" />
+                    <circle cx="762" cy="504" r="24" fill="#EEEEEE" />
+                    <line x1="1225.42" y1="899.008" x2="759.418" y2="505.055" stroke="#EEEEEE" stroke-width="8" />
+                    <circle cx="1148" cy="216" r="24" fill="#CCCCCC" />
+                    <line x1="1224.03" y1="896.421" x2="1144.03" y2="216.467" stroke="#CCCCCC" stroke-width="8" />
+                    <path id="circle_2"
+                        d="M1071.33 288C829.303 288 633.1 492.791 633.1 745.414C631.999 816.251 640.067 868.775 654.7 907H1054.49H1228V318.097C1179.35 298.653 1126.53 288 1071.33 288Z"
+                        fill="#CCCCCC" />
+                    <circle cx="396" cy="797" r="24" fill="#EEEEEE" />
+                    <line x1="1219.34" y1="899.925" x2="395.523" y2="800.971" stroke="#EEEEEE" stroke-width="8" />
+                    <circle cx="657" cy="413" r="24" fill="#EEEEEE" />
+                    <line x1="1225.42" y1="899.007" x2="654.417" y2="416.054" stroke="#EEEEEE" stroke-width="8" />
+                    <path id="circle_1"
+                        d="M1115.83 468C942.547 468 802.071 613.57 802.071 793.141C801.284 843.493 807.06 880.829 817.536 908H1103.77H1228V489.393C1193.17 475.572 1155.35 468 1115.83 468Z"
+                        fill="#EEEEEE" />
+                    <circle class="kernel_orbs" cx="907" cy="137" r="24" fill="white" />
+                    <line x1="1224.32" y1="897.511" x2="903.316" y2="138.558" stroke="white" stroke-width="8" />
+                    <circle class="kernel_orbs" cx="907" cy="762" r="24" fill="white" />
+                    <line x1="1226.34" y1="911.641" x2="929.345" y2="776.641" stroke="white" stroke-width="8" />
+
+                    <circle id="circle_kernel" cx="1228" cy="899" r="155" fill="white" />
+                </svg>
             </div>
-            <div class="row my-5">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="white-card">
-                        <h4 class="primary-text-color font-weight-bold mb-4">
-                            Section text one (1)
-                        </h4>
-                        <p class="text-left">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant impression. Le Lorem Ipsum est le faux .
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="white-card">
-                        <h4 class="primary-text-color font-weight-bold mb-4">
-                            Section text two (2)
-                        </h4>
-                        <p class="text-left">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant impression. Le Lorem Ipsum est le faux .
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="white-card">
-                        <h4 class="primary-text-color font-weight-bold mb-4">
-                            Section text three (3)
-                        </h4>
-                        <p class="text-left">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant impression. Le Lorem Ipsum est le faux .
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="unrounded-white-card">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center">
-                    <div>
-                        <p>
-                            Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un
-                            imprimeur anonyme
-                            assembla ensemble ..
-                        </p>
-                        <p class="py-3">
-                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page
-                            avant impression.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-12 d-flex align-items-center">
-                    <div class="">
-                        <a href="#" class="btn btn-primary">
-                            Anonymous
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-7 col-sm-12">
-                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition .</p>
-
-                    <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
-                    <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
-                    <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
-                </div>
-
-                <div class="col-lg-5 col-md-5 col-sm-12">
-
-                    <input type="text" name="" placeholder="Nom" id="" class="form-input-decoration my-2">
-                    <input type="text" name="" placeholder="Prénom" id="" class="form-input-decoration my-2">
-
-
-                    <textarea name="" id="" cols="30" rows="5" class="my-2" placeholder="Commentaire"
-                        style="width: 100%; border:none">
-
-                    </textarea>
-                    <input type="submit" class="btn btn-primary col-lg-12" value="Envoyer">
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <footer class="footer">
             <div class="container">
-                <div class="mb-5">
-                    <h5 class="text-center mb-4">Lorem Ipsum Lorem Ipsum </h5>
-                    <h3 class="text-center mb-3">lagaudmayeul@gmail.com </h3>
-                    <h6 class="text-center">Lorem Ipsum Lorem Ipsum</h6>
-                </div>
+                <div class="row ">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p class="primary-text-color h5 font-weight-bold mb-4">Qu'est-ce que le Lorem Ipsum</p>
+                        <p class="h2 font-weight-normal secondary-text-color h1 mb-4">I'm Doctor LAGAUD MAYEUL</p>
+                        <p class="mb-4">
+                            <small>
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant
+                                impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années
+                                1500.
+                            </small>
+                        </p>
 
-                <div class="d-flex justify-content-around">
-                    <div>
-                        <p>© 2020  . Tous Droits Réservés.</p>
+                        <a href="#" class="btn btn-primary px-5">Learn more</a>
                     </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
 
-                    <div>
-                        <p>stay connected social network link</p>
                     </div>
                 </div>
             </div>
-        </footer>
-    </section>
+        </section>
+
+        <section class="section__two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div>
+                            <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
+                            <p class="py-3">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant impression. Le Lorem Ipsum est le faux .
+                            </p>
+                            <p class="py-3">
+                                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand
+                                un
+                                imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre
+                                spécimen de
+                                polices de texte.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="background: #2F5AB5;">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="">
+                    <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
+                </div>
+                <div class="row my-5">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="white-card">
+                            <h4 class="primary-text-color font-weight-bold mb-4">
+                                Section text one (1)
+                            </h4>
+                            <p class="text-left">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant impression. Le Lorem Ipsum est le faux .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="white-card">
+                            <h4 class="primary-text-color font-weight-bold mb-4">
+                                Section text two (2)
+                            </h4>
+                            <p class="text-left">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant impression. Le Lorem Ipsum est le faux .
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="white-card">
+                            <h4 class="primary-text-color font-weight-bold mb-4">
+                                Section text three (3)
+                            </h4>
+                            <p class="text-left">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant impression. Le Lorem Ipsum est le faux .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="unrounded-white-card">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center">
+                        <div>
+                            <p>
+                                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand
+                                un
+                                imprimeur anonyme
+                                assembla ensemble ..
+                            </p>
+                            <p class="py-3">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                page
+                                avant impression.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-12 d-flex align-items-center">
+                        <div class="">
+                            <a href="#" class="btn btn-primary">
+                                Anonymous
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-7 col-sm-12">
+                        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition .</p>
+
+                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
+                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
+                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
+                    </div>
+
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+
+                        <input type="text" name="" placeholder="Nom"  class="form-input-decoration my-2">
+                        <input type="text" name="" placeholder="Prénom"  class="form-input-decoration my-2">
+
+
+                        <textarea name=""  cols="30" rows="5" class="my-2" placeholder="Commentaire"
+                            style="width: 100%; border:none">
+
+                        </textarea>
+                        <input type="submit" class="btn btn-primary col-lg-12" value="Envoyer">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <footer class="footer">
+                <div class="container">
+                    <div class="mb-5">
+                        <h5 class="text-center mb-4">Lorem Ipsum Lorem Ipsum </h5>
+                        <h3 class="text-center mb-3">lagaudmayeul@gmail.com </h3>
+                        <h6 class="text-center">Lorem Ipsum Lorem Ipsum</h6>
+                    </div>
+
+                    <div class="d-flex justify-content-around">
+                        <div>
+                            <p>© 2020 . Tous Droits Réservés.</p>
+                        </div>
+
+                        <div>
+                            <p>stay connected social network link</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
 
 
     <script src="js/jquery.min.js "></script>
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/main.js "></script>
+    <!-- Mobile Drawer -->
+    <script>
+        function openNav() {
+            document.getElementById("mobileDrawer").style.width = "250px";
+            document.getElementById("pageBody").style.marginLeft = "250px";
+            document.getElementById("pageBody").width += 250;
+            var slideRight = document.getElementsByClassName("slide-right");
+            for (var i = 0; i < slideRight.length; i++) {
+                slideRight[i].style.marginLeft = "250px";
+            }
+        }
+
+        function closeNav() {
+            document.getElementById("mobileDrawer").style.width = "0";
+            document.getElementById("pageBody").style.marginLeft = "0";
+            var slideRight = document.getElementsByClassName("slide-right");
+            for (var i = 0; i < slideRight.length; i++) {
+                slideRight[i].style.marginLeft = "0";
+            }
+        }
+    </script>
     <!-- Page Script -->
     <script>
-        $(document).ready(function(){
-            setTimeout(function(){
-                $('.preloader').addClass('fade');
-                headerSvgAnimation();
-            }, 2000);
+        $(document).ready(function () {
+            //setTimeout(function(){
+            //    $('.preloader').addClass('fade');
+            //   headerSvgAnimation();
+            //}, 2000);
         });
     </script>
     <!-- Animation -->
