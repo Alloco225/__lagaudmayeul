@@ -147,6 +147,28 @@
 
         }
     </style>
+    <!-- Sticky Navbar -->
+    <style>
+        
+        .content{
+            padding-top: 20px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            transition: position .3s easeIn;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new
+        position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+            padding-top: 110px;
+        }
+    </style>
     <!-- Shimmer loading -->
     <style>
         /* Shimmer Mobile */
@@ -288,7 +310,7 @@
 </head>
 
 <body>
-    <!-- <div class="preloader">
+     <div class="preloader">
         <box class="shine"></box>
         <topNav>
             <brand class="shine"></brand>
@@ -331,7 +353,7 @@
         </div>
         <photo class="shine"></photo>
 
-    </div> -->
+    </div> 
     <aside id="mobileDrawer" class="mobile-drawer">
         <div  class="">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -341,59 +363,9 @@
             <a href="#">Contact</a>
         </div>
     </aside>
-    <main id="pageBody" class="page-body">
+    <main id="pageBody" class="page-body bg-white">
 
-        <section>
-            <!-- NAVBAR -->
-            <nav class="navigation-bar">
-
-                <div class="container">
-                    <div class="navigation-bar__block">
-                        <div class="drawer-icon" onclick="openNav()">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-
-                        <a href="index.html" class="brand-link">
-                            <h5 class="navigation-bar__logo">LAGAUD MAYEUL</h5>
-                        </a>
-                        <ul class="navigation-bar__menu mb-0">
-                            <li class="navigation-bar__item">
-                                <a href="index.html" class="navigation-bar__link nav-color font-weight-bold">Accueil
-                                </a>
-                            </li>
-                            <li class="navigation-bar__item">
-                                <a href="pages/services.html"
-                                    class="navigation-bar__link nav-color font-weight-bold">Services </a>
-                            </li>
-                            <li class="navigation-bar__item">
-                                <a href="#" class="navigation-bar__link nav-color font-weight-bold">Activités</a>
-                            </li>
-                            <li class="navigation-bar__item">
-                                <a href="pages/blog.html" class="navigation-bar__link nav-color font-weight-bold">Textes
-                                    de lois</a>
-                            </li>
-                            <li class="navigation-bar__item">
-                                <a href="pages/contact.html"
-                                    class="navigation-bar__link nav-color font-weight-bold">Contact</a>
-                            </li>
-
-                            <a href="#" type="button" class="btn btn-primary mt-1">
-                                Action
-                            </a>
-
-                        </ul>
-
-                        <div class="hamburger-menu">
-                            <img src="images/menu.svg" class="img-fluid" alt="icon">
-                            <span class="navbar-toggler-icon"></span>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </section>
-
+        
         <!-- Header -->
         <section class="header">
             <div class="">
@@ -464,7 +436,57 @@
             </div>
         </section>
 
-        <section class="section__two">
+        <section id="stickyNavbar">
+            <!-- NAVBAR -->
+            <nav id="" class="navigation-bar">
+
+                <div class="container">
+                    <div class="navigation-bar__block">
+                        <div class="drawer-icon" onclick="openNav()">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <a href="index.html" class="brand-link">
+                            <h5 class="navigation-bar__logo">LAGAUD MAYEUL</h5>
+                        </a>
+                        <ul class="navigation-bar__menu mb-0">
+                            <li class="navigation-bar__item">
+                                <a href="index.html" class="navigation-bar__link nav-color font-weight-bold">Accueil
+                                </a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/services.html" class="navigation-bar__link nav-color font-weight-bold">Services
+                                </a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="#" class="navigation-bar__link nav-color font-weight-bold">Activités</a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/blog.html" class="navigation-bar__link nav-color font-weight-bold">Textes
+                                    de lois</a>
+                            </li>
+                            <li class="navigation-bar__item">
+                                <a href="pages/contact.html" class="navigation-bar__link nav-color font-weight-bold">Contact</a>
+                            </li>
+
+                            <a href="#" type="button" class="btn btn-primary mt-1">
+                                Action
+                            </a>
+
+                        </ul>
+
+                        <div class="hamburger-menu">
+                            <img src="images/menu.svg" class="img-fluid" alt="icon">
+                            <span class="navbar-toggler-icon"></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section class="section__two content">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
@@ -648,11 +670,29 @@
     <!-- Page Script -->
     <script>
         $(document).ready(function () {
-            //setTimeout(function(){
-            //    $('.preloader').addClass('fade');
-            //   headerSvgAnimation();
-            //}, 2000);
+            setTimeout(function(){
+                $('.preloader').addClass('fade');
+                    headerSvgAnimation();
+            }, 2000);
         });
+        // Sticky Navbar
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {stickyNavbar()};
+
+        // Get the navbar
+        var navbar = document.getElementById("stickyNavbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyNavbar() {
+        if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+        } else {
+        navbar.classList.remove("sticky");
+        }
+        }
     </script>
     <!-- Animation -->
     <script src="js/animations.js"></script>
