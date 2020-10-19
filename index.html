@@ -93,6 +93,28 @@
                 font-size: 18px;
             }
         }
+        /* Drawer icon button */
+        @media screen and (max-width: 720px){
+
+
+
+            .drawer-icon {
+            display: inline-block;
+            position: relative;
+            position: fixed;
+            top: 0;
+            margin: 5px;
+            }
+    
+            .drawer-icon div {
+            height: 3px;
+            margin-bottom: 4px;
+            width: 24px;
+            background: #282828;
+    
+            }
+        }
+
     </style>
     <!-- Custom style -->
     <style>
@@ -130,28 +152,12 @@
             transition: 1s;*/
         }
 
-        /* Drawer icon button */
-        .drawer-icon {
-            display: inline-block;
-            position: relative;
-            position: fixed;
-            top: 0;
-            margin: 5px;
-        }
-
-        .drawer-icon div {
-            height: 3px;
-            margin-bottom: 4px;
-            width: 24px;
-            background: #282828;
-
-        }
     </style>
     <!-- Sticky Navbar -->
     <style>
         
         .content{
-            padding-top: 20px;
+            padding-top: 120px;
         }
 
         /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -166,7 +172,7 @@
         /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new
         position at the top of the page (position:fixed and top:0) */
         .sticky + .content {
-            padding-top: 110px;
+            padding-top: 200px;
         }
     </style>
     <!-- Shimmer loading -->
@@ -506,7 +512,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12" style="background: #2F5AB5;">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
 
                     </div>
                 </div>
@@ -672,11 +678,14 @@
         $(document).ready(function () {
             setTimeout(function(){
                 $('.preloader').addClass('fade');
+                $('.preloader').html('');
+                $('.preloader').css('display', 'none');
                     headerSvgAnimation();
             }, 2000);
         });
         // Sticky Navbar
         // When the user scrolls the page, execute myFunction
+        
         window.onscroll = function() {stickyNavbar()};
 
         // Get the navbar
@@ -687,12 +696,16 @@
 
         // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function stickyNavbar() {
-        if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-        } else {
-        navbar.classList.remove("sticky");
+            
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+
         }
-        }
+        // Hide navbar on scroll
+        
     </script>
     <!-- Animation -->
     <script src="js/animations.js"></script>
