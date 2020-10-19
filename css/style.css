@@ -40,6 +40,14 @@
     color: var(--secondary);
 }
 
+.bg-grey{
+    background: #EFEFEF;
+}
+
+.radius {
+    border-radius: 4px;
+}
+
 body {
     font-family: 'Merriweather Sans', sans-serif;
     font-family: "Roboto";
@@ -369,8 +377,10 @@ body {
 
 .white-card {
     background-color: white;
-    padding: 25px;
+    /* padding: 25px; */
+    padding: 15px;
     border-radius: 5px;
+    box-shadow: 2px 2px 3px lightgrey;
 }
 
 .unrounded-white-card {
@@ -448,23 +458,30 @@ body {
     font-weight: 500;
 }
 
-.theme-link {
+.pill {
     padding: 5px 15px;
     color: black;
     font-weight: normal;
-    border: 1px solid rgb(216, 212, 212);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 2px 2px 2px lightgrey;
+    /* border: 1px solid rgb(224, 224, 224); */
     font-style: 13px;
 }
 
-.theme-link:hover {
+.pill-primary:hover {
     background-color: var(--primary);
     color: white;
     border: none;
 }
 
+input:focus, input:active{
+    border: none !important;
+}
+
 .input-style {
     background: #EEEEEE;
-    height: 49px;
+    height: 40px;
     border: none;
 }
 
@@ -477,7 +494,8 @@ body {
 
 .divider{
     height: 3px;
-    max-width: 50px;
+    /* max-width: 50px; */
+    max-width: 40%;
     background-color: var(--primary);
 }
 
@@ -501,7 +519,8 @@ body {
     line-height: 45px;
     width: 45px;
     height: 45px;
-    border-radius: 0!important;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px lightgrey;
     color: #797575;
     border: 1px solid #f0e9ff;
     margin-right: 10px;
