@@ -21,6 +21,7 @@
     <!-- Main Styles -->
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Icons -->
@@ -30,7 +31,8 @@
     <script src="https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js"></script>
 </head>
 
-<body>
+
+<body class="bg-grey">
     <section>
         <!-- NAVBAR -->
         <nav class="navigation-bar">
@@ -76,12 +78,12 @@
     <!-- Header -->
     <section class="blog-details-header">
         <div class="container">
-            <div class="des">
+            <div class="des wow fadeInUp" data-wow-duration=".8s" data-wow-delay="2s">
                 <h1 class="white-text-color font-weight-bold">Blog Area</h1>
-                <nav >
+                <nav>
                     <ol class="breadcrumbs">
-                    <li class="breadcrumb-item"><a href="#" class="white-text-color">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#" class="white-text-color">Blog</a></li> 
+                        <li class="breadcrumb-item"><a href="#" class="white-text-color">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="white-text-color">Blog</a></li>
                     </ol>
                 </nav>
             </div>
@@ -95,19 +97,20 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-between">
                     <!-- Blog posts wrapper -->
                     <div class="wrapper">
-                        <div class="white-card p-0 pb-3 mb-4">
+                        <div class="white-card p-0 pb-3 mb-4 wow fadeInUp" data-wow-duration=".8s" data-wow-delay="2s">
                             <div class="">
-                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%" height="250">
+                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%"
+                                    height="250">
                             </div>
-    
-    
+
                             <div class="mx-3 mt-4">
                                 <h4 class="primary-text-color font-weight-bold mb-3">
                                     Le Lorem Ipsum
                                 </h4>
-    
+
                                 <p class="h6 mb-4">
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise
+                                    en
                                     page avant impression Le Lorem Ipsum est simplement du faux texte employé dans.
                                 </p>
                                 <div class="d-flex justify-content-between">
@@ -120,7 +123,7 @@
                                                 <small>250k</small>
                                             </div>
                                         </div>
-    
+
                                         <div class="d-flex ">
                                             <div>
                                                 <i class="material-icons">mail_outline</i>
@@ -141,19 +144,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="white-card p-0 pb-3 mb-4">
+                        <div class="white-card p-0 pb-3 mb-4 wow fadeInLeft" data-wow-duration=".8s"
+                            data-wow-delay="2.5s">
                             <div class="">
-                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%" height="250">
+                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%"
+                                    height="250">
                             </div>
-    
-    
+
+
                             <div class="mx-3 mt-4">
                                 <h4 class="primary-text-color font-weight-bold mb-3">
                                     Le Lorem Ipsum
                                 </h4>
-    
+
                                 <p class="h6 mb-4">
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise
+                                    en
                                     page avant impression Le Lorem Ipsum est simplement du faux texte employé dans.
                                 </p>
                                 <div class="d-flex justify-content-between">
@@ -166,7 +172,7 @@
                                                 <small>250k</small>
                                             </div>
                                         </div>
-    
+
                                         <div class="d-flex ">
                                             <div>
                                                 <i class="material-icons">mail_outline</i>
@@ -187,19 +193,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="white-card p-0 pb-3 mb-4">
+                        <div class="white-card p-0 pb-3 mb-4 wow fadeInLeft" data-wow-duration=".8s"
+                            data-wow-delay="2.4s">
                             <div class="">
-                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%" height="250">
+                                <img src="../images/bg/img_mountains_wide.jpg" class="img-radius" width="100%"
+                                    height="250">
                             </div>
-    
-    
+
+
                             <div class="mx-3 mt-4">
                                 <h4 class="primary-text-color font-weight-bold mb-3">
                                     Le Lorem Ipsum
                                 </h4>
-    
+
                                 <p class="h6 mb-4">
-                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
+                                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise
+                                    en
                                     page avant impression Le Lorem Ipsum est simplement du faux texte employé dans.
                                 </p>
                                 <div class="d-flex justify-content-between">
@@ -212,7 +221,7 @@
                                                 <small>250k</small>
                                             </div>
                                         </div>
-    
+
                                         <div class="d-flex ">
                                             <div>
                                                 <i class="material-icons">mail_outline</i>
@@ -266,7 +275,8 @@
                             <input type="text" class="form-control" placeholder="Rechercher" name="search"
                                 aria-label="Recipient's username" aria-describedby="basic-addon2" style="border: none;">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button"> <i class="material-icons ">search</i></button>
+                                <button class="btn btn-primary" type="button"> <i
+                                        class="material-icons ">search</i></button>
                             </div>
                         </div>
                     </form>
@@ -344,7 +354,8 @@
 
                         <form action="" class="pt-3">
                             <div class="mb-3">
-                                <input type="text" class="radius col-lg-12 input-style" placeholder="Entrez votre email">
+                                <input type="text" class="radius col-lg-12 input-style"
+                                    placeholder="Entrez votre email">
                             </div>
 
                             <button type="submit" class="w-100 btn btn-primary">
@@ -360,37 +371,40 @@
     </section>
 
     <section class="py-4">
-        
+
     </section>
 
 
     <section>
-        <footer class="footer">
-            <div class="container">
-                <div class="mb-5">
-                    <h6 class="text-center mb-4"><small>Lorem Ipsum Lorem Ipsum </small></h6>
-                    <h5 class="text-center mb-3">lagaudmayeul@gmail.com </h5>
-                    <h6 class="text-center"><small>Lorem Ipsum Lorem Ipsum </small></h6>
+        <footer class="footer pt-4">
+            <div class="container d-flex flex-column justify-content-between">
+                <div class="mb-4">
+                    <h5 class="text-center mb-3">MonID.com</h5>
+                    <h3 class="text-center mb-3">lagaudmayeul@gmail.com </h3>
+                    <h6 class="text-center">Docteur agrégé en droit des affaires</h6>
                 </div>
 
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-between mt-3">
                     <div>
-                        <small>© 2020 . Tous Droits Réservés.</small>
+                        <p>© 2020 . Tous Droits Réservés.</p>
                     </div>
-
                     <div>
-                        <small>stay connected social network link</small>
+                        <p>Fait avec <i class="material-icons animated-glowing">favorite</i> par Opportune Katché</p>
                     </div>
                 </div>
             </div>
         </footer>
     </section>
 
-
+    
     <script src="../js/jquery.min.js "></script>
     <script src="../js/popper.min.js "></script>
     <script src="../js/bootstrap.min.js "></script>
     <script src="../js/main.js "></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
