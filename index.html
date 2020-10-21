@@ -29,6 +29,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.1/dist/flickity.css">
@@ -149,8 +150,7 @@
     </style>
     <!-- Sticky Navbar -->
     <style>
-        
-        .content{
+        .content {
             padding-top: 20px;
         }
 
@@ -165,7 +165,7 @@
 
         /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new
         position at the top of the page (position:fixed and top:0) */
-        .sticky + .content {
+        .sticky+.content {
             padding-top: 110px;
         }
     </style>
@@ -310,7 +310,7 @@
 </head>
 
 <body>
-     <div class="preloader">
+    <div class="preloader">
         <box class="shine"></box>
         <topNav>
             <brand class="shine"></brand>
@@ -353,9 +353,9 @@
         </div>
         <photo class="shine"></photo>
 
-    </div> 
+    </div>
     <aside id="mobileDrawer" class="mobile-drawer">
-        <div  class="">
+        <div class="">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -365,7 +365,7 @@
     </aside>
     <main id="pageBody" class="page-body bg-white">
 
-        
+
         <!-- Header -->
         <section class="header">
             <div class="">
@@ -457,7 +457,8 @@
                                 </a>
                             </li>
                             <li class="navigation-bar__item">
-                                <a href="pages/services.html" class="navigation-bar__link nav-color font-weight-bold">Services
+                                <a href="pages/services.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Services
                                 </a>
                             </li>
                             <li class="navigation-bar__item">
@@ -468,7 +469,8 @@
                                     de lois</a>
                             </li>
                             <li class="navigation-bar__item">
-                                <a href="pages/contact.html" class="navigation-bar__link nav-color font-weight-bold">Contact</a>
+                                <a href="pages/contact.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Contact</a>
                             </li>
 
                             <a href="#" type="button" class="btn btn-primary mt-1">
@@ -517,6 +519,9 @@
             <div class="container">
                 <div class="">
                     <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
+                    <div class="wow bounceInUp">Content to Reveal Here</div>
+                    <div class="wow bounce">Je veux sauter de joie quand l’utilisateur me verra</div>
+
                 </div>
                 <div class="row my-5">
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -603,11 +608,11 @@
 
                     <div class="col-lg-5 col-md-5 col-sm-12">
 
-                        <input type="text" name="" placeholder="Nom"  class="form-input-decoration my-2">
-                        <input type="text" name="" placeholder="Prénom"  class="form-input-decoration my-2">
+                        <input type="text" name="" placeholder="Nom" class="form-input-decoration my-2">
+                        <input type="text" name="" placeholder="Prénom" class="form-input-decoration my-2">
 
 
-                        <textarea name=""  cols="30" rows="5" class="my-2" placeholder="Commentaire"
+                        <textarea name="" cols="30" rows="5" class="my-2" placeholder="Commentaire"
                             style="width: 100%; border:none">
 
                         </textarea>
@@ -646,7 +651,10 @@
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/main.js "></script>
-    <!-- Mobile Drawer -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script>
         function openNav() {
             document.getElementById("mobileDrawer").style.width = "250px";
@@ -670,14 +678,14 @@
     <!-- Page Script -->
     <script>
         $(document).ready(function () {
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.preloader').addClass('fade');
-                    headerSvgAnimation();
+                headerSvgAnimation();
             }, 2000);
         });
         // Sticky Navbar
         // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {stickyNavbar()};
+        window.onscroll = function () { stickyNavbar() };
 
         // Get the navbar
         var navbar = document.getElementById("stickyNavbar");
@@ -687,11 +695,11 @@
 
         // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function stickyNavbar() {
-        if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-        } else {
-        navbar.classList.remove("sticky");
-        }
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
         }
     </script>
     <!-- Animation -->
