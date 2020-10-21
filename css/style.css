@@ -41,7 +41,8 @@
 }
 
 .bg-grey{
-    background: #EFEFEF;
+    /* background: #EFEFEF; */
+    background: #f3f7fa;
 }
 
 .radius {
