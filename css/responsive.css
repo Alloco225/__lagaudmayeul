@@ -2827,11 +2827,7 @@ fieldset:disabled a.btn {
 
 }
 
-.btn-primary:hover {
-    color: var(--primary) !important;
-    background-color: #fff;
-    border-color: var(--primary);
-}
+
 
 .btn-primary:focus,
 .btn-primary.focus {

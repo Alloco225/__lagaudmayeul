@@ -94,13 +94,31 @@
                 font-size: 18px;
             }
         }
+        /* Drawer icon button */
+        @media screen and (max-width: 720px){
+
+
+
+            .drawer-icon {
+            display: inline-block;
+            position: relative;
+            position: fixed;
+            top: 0;
+            margin: 5px;
+            }
+    
+            .drawer-icon div {
+            height: 3px;
+            margin-bottom: 4px;
+            width: 24px;
+            background: #282828;
+    
+            }
+        }
+
     </style>
     <!-- Custom style -->
     <style>
-        body {
-            margin: 0;
-        }
-
         #Layer_1 {
             display: block;
             margin: 0 auto;
@@ -131,27 +149,12 @@
             transition: 1s;*/
         }
 
-        /* Drawer icon button */
-        .drawer-icon {
-            display: inline-block;
-            position: relative;
-            position: fixed;
-            top: 0;
-            margin: 5px;
-        }
-
-        .drawer-icon div {
-            height: 3px;
-            margin-bottom: 4px;
-            width: 24px;
-            background: #282828;
-
-        }
     </style>
     <!-- Sticky Navbar -->
     <style>
-        .content {
-            padding-top: 20px;
+        
+        .content{
+            padding-top: 120px;
         }
 
         /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -165,8 +168,8 @@
 
         /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new
         position at the top of the page (position:fixed and top:0) */
-        .sticky+.content {
-            padding-top: 110px;
+        .sticky + .content {
+            padding-top: 200px;
         }
     </style>
     <!-- Shimmer loading -->
@@ -363,7 +366,7 @@
             <a href="#">Contact</a>
         </div>
     </aside>
-    <main id="pageBody" class="page-body bg-white">
+    <main id="pageBody" class="page-body">
 
 
         <!-- Header -->
@@ -415,8 +418,8 @@
             <div class="container">
                 <div class="row ">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <p class="primary-text-color h5 font-weight-bold mb-4">Qu'est-ce que le Lorem Ipsum</p>
-                        <p class="h2 font-weight-normal secondary-text-color h1 mb-4">I'm Doctor LAGAUD MAYEUL</p>
+                        <p class="primary-text-color h5 font-weight-bold mb-4">Bienvenue</p>
+                        <p class="h2 font-weight-normal secondary-text-color h1 mb-4">Je suis le Docteur LAGAUD MAYEUL</p>
                         <p class="mb-4">
                             <small>
                                 Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
@@ -508,7 +511,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12" style="background: #2F5AB5;">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
 
                     </div>
                 </div>
@@ -518,16 +521,13 @@
         <section class="py-5">
             <div class="container">
                 <div class="">
-                    <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
-                    <div class="wow bounceInUp">Content to Reveal Here</div>
-                    <div class="wow bounce">Je veux sauter de joie quand l’utilisateur me verra</div>
-
+                    <h2 class="primary-text-color font-weight-bold">Les services que je propose</h2>
                 </div>
                 <div class="row my-5">
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="white-card">
+                        <div class="white-card shadow">
                             <h4 class="primary-text-color font-weight-bold mb-4">
-                                Section text one (1)
+                                Droit publique
                             </h4>
                             <p class="text-left">
                                 Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
@@ -537,9 +537,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="white-card">
+                        <div class="white-card shadow">
                             <h4 class="primary-text-color font-weight-bold mb-4">
-                                Section text two (2)
+                                Droit privé
                             </h4>
                             <p class="text-left">
                                 Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
@@ -549,9 +549,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <div class="white-card">
+                        <div class="white-card shadow">
                             <h4 class="primary-text-color font-weight-bold mb-4">
-                                Section text three (3)
+                                Droit des affaires
                             </h4>
                             <p class="text-left">
                                 Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en
@@ -599,11 +599,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-7 col-sm-12">
-                        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition .</p>
+                        <div class="mt-md-5">
 
-                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
-                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
-                        <p class="py-2">Le Lorem Ipsum est simplement du faux texte employé dans la composition.</p>
+                            <h2 class="title">En quoi puis-je vous aider ?</h2>
+                            
+                            <p class="py-2">
+                                Vous avez des questions et vous voulez les réponses d'un expert ? Discutons-en.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="col-lg-5 col-md-5 col-sm-12">
@@ -612,38 +615,33 @@
                         <input type="text" name="" placeholder="Prénom" class="form-input-decoration my-2">
 
 
-                        <textarea name="" cols="30" rows="5" class="my-2" placeholder="Commentaire"
-                            style="width: 100%; border:none">
-
-                        </textarea>
-                        <input type="submit" class="btn btn-primary col-lg-12" value="Envoyer">
+                        <textarea name=""  cols="30" rows="5" class="my-2 p-2" placeholder="Votre message"
+                            style="width: 100%; border:none"></textarea>
+                        <input type="submit" class="btn btn-primary py-2 col-lg-12" value="Envoyer">
 
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <footer class="footer">
-                <div class="container">
-                    <div class="mb-5">
-                        <h5 class="text-center mb-4">Lorem Ipsum Lorem Ipsum </h5>
-                        <h3 class="text-center mb-3">lagaudmayeul@gmail.com </h3>
-                        <h6 class="text-center">Lorem Ipsum Lorem Ipsum</h6>
+        <footer class="footer pt-5">
+            <div class="container d-flex flex-column justify-content-between">
+                <div class="mb-5">
+                    <h5 class="text-center mb-4">MonID.com</h5>
+                    <h3 class="text-center mb-3">lagaudmayeul@gmail.com </h3>
+                    <h6 class="text-center">Docteur agrégé en droit des affaires</h6>
+                </div>
+
+                <div class="d-flex justify-content-between mt-5">
+                    <div>
+                        <p>© 2020 . Tous Droits Réservés.</p>
                     </div>
-
-                    <div class="d-flex justify-content-around">
-                        <div>
-                            <p>© 2020 . Tous Droits Réservés.</p>
-                        </div>
-
-                        <div>
-                            <p>stay connected social network link</p>
-                        </div>
+                    <div>
+                        <p>Fait avec <i class="material-icons animated-glowing">favorite</i> par Opportune Katché</p>
                     </div>
                 </div>
-            </footer>
-        </section>
+            </div>
+        </footer>
     </main>
 
 
@@ -680,12 +678,15 @@
         $(document).ready(function () {
             setTimeout(function () {
                 $('.preloader').addClass('fade');
-                headerSvgAnimation();
+                $('.preloader').html('');
+                $('.preloader').css('display', 'none');
+                    headerSvgAnimation();
             }, 2000);
         });
         // Sticky Navbar
         // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { stickyNavbar() };
+        
+        window.onscroll = function() {stickyNavbar()};
 
         // Get the navbar
         var navbar = document.getElementById("stickyNavbar");
@@ -695,12 +696,16 @@
 
         // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function stickyNavbar() {
+            
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
             } else {
-                navbar.classList.remove("sticky");
+            navbar.classList.remove("sticky");
             }
+
         }
+        // Hide navbar on scroll
+        
     </script>
     <!-- Animation -->
     <script src="js/animations.js"></script>
