@@ -408,6 +408,7 @@ body {
     /* height: 400px; */
     background-color: #DDDDDD;
     padding: 50px 20px;
+    width: 100%;
 }
 
 .header-des {
@@ -420,7 +421,7 @@ body {
 
 .footer {
     background-color: var(--primary);
-    
+    width: 100%;
     color: white;
 }
 
