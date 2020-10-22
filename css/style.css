@@ -77,7 +77,7 @@ body {
 
 .navigation-bar {
     background-color: #fff;
-    padding: 1.8rem 0 1.8rem;
+    padding: 1.8rem 0 2.1rem;
     position: sticky;
     top: 0;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
@@ -355,12 +355,12 @@ body {
 
 /* header */
 
-.header {
-    /* position: absolute; */
+/* .header {
+    position: absolute;
     background: #DDDDDD;
     height: 400px;
     width: 100%;
-}
+} */
 
 .blog-details-header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, .712)), url('../images/bg/img_5terre_wide.jpg');
@@ -405,7 +405,7 @@ body {
 
 .header {
     /* position: absolute; */
-    height: 400px;
+    /* height: 400px; */
     background-color: #DDDDDD;
     padding: 50px 20px;
 }
