@@ -109,7 +109,7 @@ body {
 
 @media only screen and (max-width: 36em) {
     .navigation-bar .hamburger-menu {
-        right: 0.2rem;
+        right: 0rem;
     }
 }
 
