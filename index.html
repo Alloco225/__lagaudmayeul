@@ -29,6 +29,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.1/dist/flickity.css">
@@ -312,7 +313,7 @@
 </head>
 
 <body>
-     <div class="preloader">
+    <div class="preloader">
         <box class="shine"></box>
         <topNav>
             <brand class="shine"></brand>
@@ -355,9 +356,9 @@
         </div>
         <photo class="shine"></photo>
 
-    </div> 
+    </div>
     <aside id="mobileDrawer" class="mobile-drawer">
-        <div  class="">
+        <div class="">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -367,7 +368,7 @@
     </aside>
     <main id="pageBody" class="page-body">
 
-        
+
         <!-- Header -->
         <section class="header">
             <div class="">
@@ -416,7 +417,7 @@
             </div>
             <div class="container">
                 <div class="row ">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12  wow fadeInUp" data-wow-duration=".3s"data-wow-delay="3s">
                         <p class="primary-text-color h5 font-weight-bold mb-4">Bienvenue</p>
                         <p class="h2 font-weight-normal secondary-text-color h1 mb-4">Je suis le Docteur LAGAUD MAYEUL</p>
                         <p class="mb-4">
@@ -459,7 +460,8 @@
                                 </a>
                             </li>
                             <li class="navigation-bar__item">
-                                <a href="pages/services.html" class="navigation-bar__link nav-color font-weight-bold">Services
+                                <a href="pages/services.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Services
                                 </a>
                             </li>
                             <li class="navigation-bar__item">
@@ -470,7 +472,8 @@
                                     de lois</a>
                             </li>
                             <li class="navigation-bar__item">
-                                <a href="pages/contact.html" class="navigation-bar__link nav-color font-weight-bold">Contact</a>
+                                <a href="pages/contact.html"
+                                    class="navigation-bar__link nav-color font-weight-bold">Contact</a>
                             </li>
 
                             <a href="#" type="button" class="btn btn-primary mt-1">
@@ -491,7 +494,7 @@
         <section class="section__two content">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12 wow fadeInRight" data-wow-duration=".7s"  data-wow-delay="2s">
                         <div>
                             <h2 class="primary-text-color font-weight-bold">Qu'est-ce que le Lorem Ipsum?</h2>
                             <p class="py-3">
@@ -518,10 +521,10 @@
         <section class="py-5">
             <div class="container">
                 <div class="">
-                    <h2 class="primary-text-color font-weight-bold">Les services que je propose</h2>
+                    <h2 class="primary-text-color font-weight-bold  wow fadeInUp" data-wow-duration=".2s"  data-wow-delay="2s">Les services que je propose</h2>
                 </div>
                 <div class="row my-5">
-                    <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-2 wow fadeInLeft" data-wow-duration=".8s"   data-wow-delay="2s">
                         <div class="white-card shadow">
                             <h4 class="primary-text-color font-weight-bold mb-4">
                                 Droit publique
@@ -533,9 +536,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12  mb-2 wow fadeInUp" data-wow-duration=".8s"  data-wow-delay="2s" >
                         <div class="white-card shadow">
-                            <h4 class="primary-text-color font-weight-bold mb-4">
+                            <h4 class="primary-text-color font-weight-bold mb-4 " >
                                 Droit privé
                             </h4>
                             <p class="text-left">
@@ -545,7 +548,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 mb-2 wow fadeInRight" data-wow-duration=".8s"  data-wow-delay="2s">
                         <div class="white-card shadow">
                             <h4 class="primary-text-color font-weight-bold mb-4">
                                 Droit des affaires
@@ -564,7 +567,7 @@
         <section class="unrounded-white-card">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center">
+                    <div class="col-lg-9 col-md-9 col-sm-12 d-flex align-items-center wow slideInLeft" data-wow-duration=".6s"  data-wow-delay="2s">
                         <div>
                             <p>
                                 Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand
@@ -581,7 +584,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 col-sm-12 d-flex align-items-center">
+                    <div class="col-lg-3 col-md-3 col-sm-12 d-flex align-items-center wow fadeIn" data-wow-duration=".7s" data-wow-delay="3s">
                         <div class="">
                             <a href="#" class="btn btn-primary">
                                 Anonymous
@@ -598,18 +601,18 @@
                     <div class="col-lg-7 col-md-7 col-sm-12">
                         <div class="mt-md-5">
 
-                            <h2 class="title">En quoi puis-je vous aider ?</h2>
+                            <h2 class="title wow fadeInUp" data-wow-duration=".2s"  data-wow-delay="2s">En quoi puis-je vous aider ?</h2>
                             
-                            <p class="py-2">
+                            <p class="py-2 wow fadeInUp" data-wow-duration=".6s"  data-wow-delay="2s">
                                 Vous avez des questions et vous voulez les réponses d'un expert ? Discutons-en.
                             </p>
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-5 col-sm-12">
+                    <div class="col-lg-5 col-md-5 col-sm-12 wow fadeInRight" data-wow-duration=".8s"  data-wow-delay="2s" data-wow-delay="2s">
 
-                        <input type="text" name="" placeholder="Nom"  class="form-input-decoration my-2">
-                        <input type="text" name="" placeholder="Prénom"  class="form-input-decoration my-2">
+                        <input type="text" name="" placeholder="Nom" class="form-input-decoration my-2">
+                        <input type="text" name="" placeholder="Prénom" class="form-input-decoration my-2">
 
 
                         <textarea name=""  cols="30" rows="5" class="my-2 p-2" placeholder="Votre message"
@@ -630,15 +633,19 @@
                 </div>
 
                 <div class="d-flex justify-content-between mt-5">
-                    <div>
-                        <p>© 2020 . Tous Droits Réservés.</p>
-                    </div>
-                    <div>
-                        <p>Fait avec <i class="material-icons animated-glowing">favorite</i> par Opportune Katché</p>
+                    
+    
+                    <div class="d-flex justify-content-between mt-3">
+                        <div>
+                            <p>© 2020 . Tous Droits Réservés.</p>
+                        </div>
+                        <div>
+                            <p>Fait avec <i class="material-icons animated-glowing">favorite</i></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </section>
     </main>
 
 
@@ -646,7 +653,10 @@
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/main.js "></script>
-    <!-- Mobile Drawer -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script>
         function openNav() {
             document.getElementById("mobileDrawer").style.width = "250px";
@@ -670,7 +680,7 @@
     <!-- Page Script -->
     <script>
         $(document).ready(function () {
-            setTimeout(function(){
+            setTimeout(function () {
                 $('.preloader').addClass('fade');
                 $('.preloader').html('');
                 $('.preloader').css('display', 'none');

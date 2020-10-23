@@ -12,6 +12,9 @@
     --bodyFont: ;
     --linkFont: ;
 }
+a{
+    color: black;
+}
 
 .shadow{
     box-shadow: 2px 2px 3px lightgrey;
@@ -25,6 +28,7 @@
     vertical-align: middle !important;
     /* font-size: inherit; */
 }
+
 
 /*NAVBAR*/
 
@@ -68,12 +72,12 @@ body {
 .nav-color:hover {
     color: var(--primary);
     font-weight: 500;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .navigation-bar {
     background-color: #fff;
-    padding: 1.8rem 0 1.8rem;
+    padding: 1.8rem 0 2.1rem;
     position: sticky;
     top: 0;
     box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
@@ -105,7 +109,7 @@ body {
 
 @media only screen and (max-width: 36em) {
     .navigation-bar .hamburger-menu {
-        right: 1rem;
+        right: 0rem;
     }
 }
 
@@ -351,12 +355,12 @@ body {
 
 /* header */
 
-.header {
-    /* position: absolute; */
+/* .header {
+    position: absolute;
     background: #DDDDDD;
     height: 400px;
     width: 100%;
-}
+} */
 
 .blog-details-header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, .712)), url('../images/bg/img_5terre_wide.jpg');
@@ -401,9 +405,10 @@ body {
 
 .header {
     /* position: absolute; */
-    height: 400px;
+    /* height: 400px; */
     background-color: #DDDDDD;
     padding: 50px 20px;
+    width: 100%;
 }
 
 .header-des {
@@ -416,7 +421,7 @@ body {
 
 .footer {
     background-color: var(--primary);
-    
+    width: 100%;
     color: white;
 }
 
